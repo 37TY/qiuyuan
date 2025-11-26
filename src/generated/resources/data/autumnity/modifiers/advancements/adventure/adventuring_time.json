@@ -1,0 +1,54 @@
+{
+  "modifiers": [
+    {
+      "type": "criteria",
+      "config": {
+        "criteria": {
+          "autumnity:autumnity:maple_forest": {
+            "conditions": {
+              "player": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "location": {
+                      "biome": "autumnity:maple_forest"
+                    }
+                  }
+                }
+              ]
+            },
+            "trigger": "minecraft:location"
+          },
+          "autumnity:autumnity:pumpkin_fields": {
+            "conditions": {
+              "player": [
+                {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "location": {
+                      "biome": "autumnity:pumpkin_fields"
+                    }
+                  }
+                }
+              ]
+            },
+            "trigger": "minecraft:location"
+          }
+        },
+        "requirements": [
+          [
+            "autumnity:autumnity:maple_forest"
+          ],
+          [
+            "autumnity:autumnity:pumpkin_fields"
+          ]
+        ],
+        "should_replace_requirements": false
+      }
+    }
+  ],
+  "priority": "normal",
+  "selector": "minecraft:adventure/adventuring_time"
+}

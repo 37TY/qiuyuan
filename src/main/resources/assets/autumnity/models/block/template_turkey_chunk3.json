@@ -1,0 +1,29 @@
+{
+	"credit": "hatsondogs",
+	"ambientocclusion": false,
+	"texture_size": [32, 32],
+	"textures": {
+		"particle": "#turkey"
+	},
+	"elements": [
+		{
+			"from": [3, 0, 6],
+			"to": [13, 8, 14],
+			"faces": {
+				"north": {"uv": [0, 7.5, 5, 11.5], "texture": "#turkey"},
+				"east": {"uv": [0, 0, 4, 4], "texture": "#turkey"},
+				"south": {"uv": [11, 0, 16, 4], "texture": "#turkey"},
+				"west": {"uv": [4, 0, 0, 4], "texture": "#turkey"},
+				"up": {"uv": [8, 6, 13, 10], "texture": "#turkey"},
+				"down": {"uv": [8, 12, 13, 16], "rotation": 180, "texture": "#turkey"}
+			}
+		}
+	],
+	"display": {
+		"head": {
+			"rotation": [-90, 180, 0],
+			"translation": [0, 2, -7.25],
+			"scale": [1.85, 1.85, 1.85]
+		}
+	}
+}

@@ -1,0 +1,108 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "block": "autumnity:turkey",
+                  "condition": "minecraft:block_state_property",
+                  "properties": {
+                    "chunks": "0"
+                  }
+                }
+              ],
+              "name": "autumnity:turkey"
+            },
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "block": "autumnity:turkey",
+                      "condition": "minecraft:block_state_property",
+                      "properties": {
+                        "chunks": "4"
+                      }
+                    }
+                  ],
+                  "name": "autumnity:turkey_piece"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "block": "autumnity:turkey",
+                      "condition": "minecraft:block_state_property",
+                      "properties": {
+                        "chunks": "3"
+                      }
+                    }
+                  ],
+                  "functions": [
+                    {
+                      "add": false,
+                      "count": 2.0,
+                      "function": "minecraft:set_count"
+                    }
+                  ],
+                  "name": "autumnity:turkey_piece"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "block": "autumnity:turkey",
+                      "condition": "minecraft:block_state_property",
+                      "properties": {
+                        "chunks": "2"
+                      }
+                    }
+                  ],
+                  "functions": [
+                    {
+                      "add": false,
+                      "count": 3.0,
+                      "function": "minecraft:set_count"
+                    }
+                  ],
+                  "name": "autumnity:turkey_piece"
+                },
+                {
+                  "type": "minecraft:item",
+                  "conditions": [
+                    {
+                      "block": "autumnity:turkey",
+                      "condition": "minecraft:block_state_property",
+                      "properties": {
+                        "chunks": "1"
+                      }
+                    }
+                  ],
+                  "functions": [
+                    {
+                      "add": false,
+                      "count": 4.0,
+                      "function": "minecraft:set_count"
+                    }
+                  ],
+                  "name": "autumnity:turkey_piece"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "autumnity:blocks/turkey"
+}
