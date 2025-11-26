@@ -32,9 +32,19 @@ jobs:
       with:
         cache-disabled: true
         
-    - name: Build with Gradle
-      run: ./gradlew build --no-daemon --stacktrace --info
-      continue-on-error: false
+    - name: Clean Gradle cache
+      run: |
+        rm -rf ~/.gradle/caches/forge_gradle
+        rm -rf ~/.gradle/caches/minecraft
+        ./gradlew clean --no-daemon || true
+        
+    - name: Build with Gradle (with retry)
+      uses: nick-fields/retry@v2
+      with:
+        timeout_minutes: 30
+        max_attempts: 3
+        retry_wait_seconds: 30
+        command: ./gradlew build --no-daemon --stacktrace --refresh-dependencies
       
     - name: Display build output on failure
       if: failure()
